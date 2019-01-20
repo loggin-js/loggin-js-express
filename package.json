@@ -1,0 +1,39 @@
+{
+  "name": "express-loggin-js",
+  "version": "0.0.1",
+  "description": "Express middleware for loggin-js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": {
+    "name": "nombrekeff",
+    "email": "edgemanolo@chip-chap.com",
+    "url": "https://github.com/nombrekeff"
+  },
+  "bugs": {
+    "url": "https://github.com/nombrekeff/logging-js/issues/new/choose",
+    "email": "keff@gmail.com"
+  },
+  "homepage": "https://nombrekeff.github.io/loggin-js/",
+  "license": "MIT",
+  "keywords": [
+    "logging",
+    "logger",
+    "severities",
+    "nodejs",
+    "logs",
+    "js logger",
+    "file logger",
+    "remote logger",
+    "file",
+    "js",
+    "express",
+    "middleware"
+  ],
+  "dependencies": {
+    "express": "^4.16.4",
+    "loggin-js": "^0.3.1",
+    "string-format": "^2.0.0"
+  }
+}
