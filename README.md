@@ -7,8 +7,7 @@ An express middleware for [loggin-js](https://github.com/nombrekeff/loggin-js)
 - [Importing](#importing)
 - [Api](#api)
     - [.logger(opts)](#loggeropts)
-    - [.errorLogger()](#errorlogger)
-    - [.logger(opts)](#loggeropts-1)
+    - [.errorLogger(opts)](#errorloggeropts)
 - [Found a bug?](#found-a-bug)
 - [Collaborating](#collaborating)
 
@@ -68,8 +67,7 @@ interface LoggerOptions = {
 }
 ```
 
-##### .errorLogger()
-##### .logger(opts)
+##### .errorLogger(opts)
 To create an **ERROR** middleware is also really easy, just call `.errorLogger` instead. It accepts the same options as [`.logger`](#logger)
 ```js
 const app = express();
@@ -110,7 +108,7 @@ interface ErrorLoggerOptions = {
 
 
 ### Found a bug?
-If you found a bug or like to leave a feature request, please leave an issue and we will take care of it.
+If you found a 🐛 **bug** or like to leave a 🚀 **feature request**, please [leave an issue](https://github.com/nombrekeff/express-loggin-js/issues/new/choose) and we will take care of it.
 > Just make sure it's not already filed.
 
 
