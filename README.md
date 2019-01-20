@@ -8,8 +8,8 @@ An express middleware for [loggin-js](https://github.com/nombrekeff/loggin-js)
 - [Api](#api)
     - [.logger(opts)](#loggeropts)
     - [.errorLogger(opts)](#errorloggeropts)
-- [🐛 Found a bug?](#%F0%9F%90%9B-found-a-bug)
-- [👊 Collaborating](#%F0%9F%91%8A-collaborating)
+- [Found a bug?](#found-a-bug)
+- [Collaborating](#collaborating)
 
 ### Installing
 * Install with npm
@@ -106,11 +106,11 @@ interface ErrorLoggerOptions = {
 }
 ```
 
-### 🐛 Found a bug?
+### Found a bug?
 If you found a **bug** or like to leave a **feature request**, please [leave an issue](https://github.com/nombrekeff/express-loggin-js/issues/new/choose) and we will take care of it.
 > Just make sure it's not already filed.
 
 
-### 👊 Collaborating
+### Collaborating
 Hi there, if you like the project don't hesitate in collaborating (_if you like to_), submit a pull request, post an issue, ...   
 Any **help** or **ideas** are apreciated!
