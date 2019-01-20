@@ -1,13 +1,13 @@
 # express-loggin-js <!-- omit in toc -->
 
 ## Table Of Content <!-- omit in toc -->
-- [Get Started](#get-started)
+- [Installing](#installing)
 - [Importing](#importing)
 - [Api](#api)
     - [.logger()](#logger)
     - [.errorLogger()](#errorlogger)
 
-### Get Started
+### Installing
 * Install with npm
 ```bash
 npm install express-loggin-js --save
@@ -27,15 +27,12 @@ const loggingMW = require('express-loggin-js');
 ##### .logger()
 The fastest way of adding a logger would be to create a logger middleware, it accepts some options defined below.
 ```js
+const logging = require('loggin-js');
+const loggingMW = require('express-loggin-js');
+
 const app = express();
 
-const loggerMw = logginMW.logger({
-  loggers: [loggin.Loggers.ConsoleLogger],
-  color: true,
-  msg: `{req.protocol} <%m{req.method}> <%gr{req.path}>`
-});
-
-app.use(loggerMw);
+app.use(logginMW.logger());
 
 app.get('/hello', function (req, res) {
   
