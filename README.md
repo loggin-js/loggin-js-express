@@ -1,5 +1,33 @@
 # express-loggin-js <!-- omit in toc -->
 
+[![NPM version][npm-image]][npm-url]
+[![NPM quality][code-quality-badge]][code-quality-link]
+[![build status][travis-image]][travis-url]
+[![Downloads][downloads-badge]][downloads-link]
+[![Dependencies][dependencies-badge]][dependencies-link]
+[![Known Vulnerabilities][vulnerabilities-badge]][vulnerabilities-link]
+
+
+<!-- Links -->
+[npm-image]: https://img.shields.io/npm/v/express-loggin-js.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/express-loggin-js
+
+[travis-image]: https://img.shields.io/travis/nombrekeff/express-loggin-js.svg?style=flat-square
+[travis-url]: https://travis-ci.org/nombrekeff/express-loggin-js
+
+[code-quality-badge]: http://npm.packagequality.com/shield/express-loggin-js.svg?style=flat-square
+[code-quality-link]: https://packagequality.com/#?package=express-loggin-js
+
+[downloads-badge]: https://img.shields.io/npm/dt/express-loggin-js.svg?style=flat-square
+[downloads-link]: https://www.npmjs.com/package/express-loggin-js
+
+[dependencies-badge]: https://img.shields.io/david/nombrekeff/express-loggin-js.svg?style=flat-square
+[dependencies-link]: https://david-dm.org/nombrekeff/express-loggin-js?view=tree
+
+[vulnerabilities-badge]: https://snyk.io/test/npm/express-loggin-js/badge.svg?style=flat-square
+[vulnerabilities-link]: https://snyk.io/test/npm/express-loggin-js
+
+
 An express middleware for [loggin-js](https://github.com/nombrekeff/loggin-js)
 
 ## Table Of Content <!-- omit in toc -->
