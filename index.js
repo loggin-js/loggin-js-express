@@ -105,9 +105,6 @@ const constructMidleware = (opts = {}, logger) => {
 };
 
 const logginExpress = {
-  /**
-   * @param {any} options 
-   */
   logger(opts = {}) {
     opts = {
       ...defaultLoggerOptions,
@@ -118,10 +115,6 @@ const logginExpress = {
     return (req, res, next) =>
       constructMidleware(opts, logger)(req, res, next);
   },
-
-  /**
-   * @param {any} options 
-   */
   errorLogger(opts = {}) {
     opts = {
       ...defaultErrorLoggerOptions,

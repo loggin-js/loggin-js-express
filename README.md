@@ -100,11 +100,6 @@ To create an **ERROR** middleware is also really easy, just call `.errorLogger` 
 ```js
 const app = express();
 
-app.use(logginMW.logger({
-  color: true,
-  loggers: [loggin.Loggers.ConsoleLogger]
-}));
-
 app.get('/hello', function (req, res) {
   // Logger is attached to the response to lert you use it within the routes
   res.logger.debug('Logger from within the response!');
@@ -113,6 +108,12 @@ app.get('/hello', function (req, res) {
    message: 'Hello world!'
   });
 });
+
+// Notice it's placed after routes and other app.use calls
+app.use(logginMW.errorLogger({
+  color: true,
+  loggers: [loggin.Loggers.ConsoleLogger]
+}));
 ```
 **Options:**  
 **errorLogger** accepts an object containing some options, it extends options from [loggin.Loggers.Options](https://github.com/nombrekeff/loggin-js/wiki/Logger#loggingloggerslogger), and adds a couple of custom ones. 
