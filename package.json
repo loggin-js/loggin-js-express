@@ -1,5 +1,5 @@
 {
-  "name": "express-loggin-js",
+  "name": "loggin-js-express",
   "version": "0.1.1",
   "description": "Express middleware for loggin-js",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "author": {
     "name": "nombrekeff",
-    "email": "edgemanolo@chip-chap.com",
+    "email": "manoloedge96@gmail.com",
     "url": "https://github.com/nombrekeff"
   },
   "bugs": {
-    "url": "https://github.com/nombrekeff/logging-js/issues/new/choose",
+    "url": "https://github.com/nombrekeff/logging-js-express/issues/new/choose",
     "email": "keff@gmail.com"
   },
-  "homepage": "https://nombrekeff.github.io/loggin-js/",
+  "homepage": "https://nombrekeff.github.io/loggin-js-express/",
   "license": "MIT",
   "keywords": [
     "logging",
@@ -32,7 +32,7 @@
     "middleware"
   ],
   "dependencies": {
-    "loggin-js": "^0.4.1",
+    "loggin-js": "^1.1.0",
     "string-format": "^2.0.0"
   },
   "devDependencies": {

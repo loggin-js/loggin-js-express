@@ -30,13 +30,9 @@ const cleanRequest = (req_) => {
   return rest;
 }
 
-
 const defaultLoggerOptions = {
-  severity: loggin.Severity.DEBUG,
   formatter: '[<%c{time.toLocaleString}>] - {severityStr} - {message} - {data}',
-  showRaw: false,
-  loggers: [loggin.Loggers.ConsoleLogger],
-  msg: `<%m{req.method}> {req.protocol} <%gr{req.path}> @ <%c{req.ip}> `,
+  msg: `<%m{req.method}> {req.protocol} <%gr{req.path}> @ <%c{req.connection.remoteAddress}> `,
   ignore(req, res) {
     return false;
   }
@@ -44,7 +40,6 @@ const defaultLoggerOptions = {
 
 const defaultErrorLoggerOptions = {
   ...defaultLoggerOptions,
-  severity: loggin.Severity.ERROR,
   msg: `<%m{req.method}> {req.protocol} <%gr{req.path}>: <%r{res.statusCode}> <%r{err}>`
 };
 
@@ -53,16 +48,16 @@ const constructLogger = (opts = {}) => {
     throw new Error('opts.msg must be a string or a function');
   }
 
-  let loggers = [];
-  for (let LoggerConstructor of opts.loggers) {
-    loggers.push(new LoggerConstructor(opts));
-  }
-
-  return loggin.join(loggers, opts);
+  return loggin.logger(opts);
 };
 
-const constructMidleware = (opts = {}, logger) => {
+const constructMidleware = (logger, opts) => {
   return (...args) => {
+    opts = {
+      ...defaultLoggerOptions,
+      ...opts
+    };
+
     if (opts.ignore(...args)) next();
 
     let next;
@@ -99,33 +94,43 @@ const constructMidleware = (opts = {}, logger) => {
       msg = message + ' - ' + JSON.stringify(cleanReq, null, 2);
     }
 
-    logger.log(msg, null, opts.severity, logger.channel, Date.now(), logger.user);
+    logger.log(msg, null, {
+      severity: opts.severity,
+      channel: logger.options.channel,
+      time: Date.now(),
+      user: logger.options.user
+    });
     next();
   }
 };
 
 const logginExpress = {
-  logger(opts = {}) {
+  logger(opts = {}, premadeLogger) {
     opts = {
       ...defaultLoggerOptions,
       ...opts
     };
 
-    let logger = constructLogger({...opts});
-    return (req, res, next) =>
-      constructMidleware(opts, logger)(req, res, next);
+    let logger = premadeLogger || constructLogger(opts);
+    let mw = (req, res, next) =>
+      constructMidleware(logger, opts)(req, res, next);
+
+    mw.logger = logger;
+    return mw;
   },
-  errorLogger(opts = {}) {
+  errorLogger(opts = {}, premadeLogger) {
     opts = {
       ...defaultErrorLoggerOptions,
       ...opts
     };
 
-    let logger = constructLogger({...opts});
-
+    let logger = premadeLogger || constructLogger({ ...opts });
     return (err, req, res, next) =>
-      constructMidleware(opts, logger)(err, req, res, next);
-  }
+      constructMidleware(logger, opts)(err, req, res, next);
+  },
+  constructMidleware,
+  constructLogger,
+  cleanRequest
 };
 
 module.exports = logginExpress;
