@@ -12,8 +12,8 @@
     "url": "https://github.com/nombrekeff"
   },
   "bugs": {
-    "url": "https://github.com/nombrekeff/logging-js-express/issues/new/choose",
-    "email": "keff@gmail.com"
+    "url": "https://github.com/loggin-js/logging-js-express/issues/new",
+    "email": "manoloedge96@gmail.com"
   },
   "homepage": "https://nombrekeff.github.io/loggin-js-express/",
   "license": "MIT",
@@ -32,7 +32,7 @@
     "middleware"
   ],
   "dependencies": {
-    "loggin-js": "^1.1.0",
+    "loggin-js": "^1.3.3",
     "string-format": "^2.0.0"
   },
   "devDependencies": {
