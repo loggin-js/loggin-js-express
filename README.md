@@ -1,4 +1,4 @@
-# express-loggin-js <!-- omit in toc -->
+# loggin-js-express <!-- omit in toc -->
 
 [![NPM version][npm-image]][npm-url]
 [![NPM quality][code-quality-badge]][code-quality-link]
@@ -6,28 +6,41 @@
 [![Dependencies][dependencies-badge]][dependencies-link]
 [![Known Vulnerabilities][vulnerabilities-badge]][vulnerabilities-link]
 
-
 <!-- Links -->
-[npm-image]: https://img.shields.io/npm/v/express-loggin-js.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/express-loggin-js
+[npm-image]: https://img.shields.io/npm/v/loggin-js-express.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/loggin-js-express
 
-[travis-image]: https://img.shields.io/travis/nombrekeff/express-loggin-js.svg?style=flat-square
-[travis-url]: https://travis-ci.org/nombrekeff/express-loggin-js
+[travis-image]: https://img.shields.io/travis/nombrekeff/loggin-js-express.svg?style=flat-square
+[travis-url]: https://travis-ci.org/nombrekeff/loggin-js-express
 
-[code-quality-badge]: http://npm.packagequality.com/shield/express-loggin-js.svg?style=flat-square
-[code-quality-link]: https://packagequality.com/#?package=express-loggin-js
+[code-quality-badge]: http://npm.packagequality.com/shield/loggin-js-express.svg?style=flat-square
+[code-quality-link]: https://packagequality.com/#?package=loggin-js-express
 
-[downloads-badge]: https://img.shields.io/npm/dt/express-loggin-js.svg?style=flat-square
-[downloads-link]: https://www.npmjs.com/package/express-loggin-js
+[downloads-badge]: https://img.shields.io/npm/dt/loggin-js-express.svg?style=flat-square
+[downloads-link]: https://www.npmjs.com/package/loggin-js-express
 
-[dependencies-badge]: https://img.shields.io/david/nombrekeff/express-loggin-js.svg?style=flat-square
-[dependencies-link]: https://david-dm.org/nombrekeff/express-loggin-js?view=tree
+[dependencies-badge]: https://img.shields.io/david/nombrekeff/loggin-js-express.svg?style=flat-square
+[dependencies-link]: https://david-dm.org/nombrekeff/loggin-js-express?view=tree
 
-[vulnerabilities-badge]: https://snyk.io/test/npm/express-loggin-js/badge.svg?style=flat-square
-[vulnerabilities-link]: https://snyk.io/test/npm/express-loggin-js
+[vulnerabilities-badge]: https://snyk.io/test/npm/loggin-js-express/badge.svg?style=flat-square
+[vulnerabilities-link]: https://snyk.io/test/npm/loggin-js-express
 
+<div align="center">
 
-An express middleware for [loggin-js](https://github.com/nombrekeff/loggin-js)
+# Express middleware for [Loggin'JS](https://github.com/loggin-js/loggin-js) ![](https://img.shields.io/badge/PRs-welcome-green.svg) <!-- omit in toc -->
+
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-badge]][downloads-link]
+[![Dependencies][dependencies-badge]][dependencies-link]
+[![Known Vulnerabilities][vulnerabilities-badge]][vulnerabilities-link]  
+[![NPM quality][code-quality-badge]][code-quality-link]  
+  
+<p>
+A little express middleware for <a href="https://github.com/loggin-js/loggin-js">Loggin'JS<a>
+</p>
+</div>
+
+****
 
 ## Table Of Content <!-- omit in toc -->
 - [Installing](#installing)
@@ -41,7 +54,7 @@ An express middleware for [loggin-js](https://github.com/nombrekeff/loggin-js)
 ### Installing
 * Install with npm
 ```bash
-npm install express-loggin-js --save
+npm install loggin-js-express --save
 ```
 
 ### Importing
@@ -50,7 +63,7 @@ npm install express-loggin-js --save
 const logging = require('loggin-js');
 
 // Require the express middleware
-const loggingMW = require('express-loggin-js');
+const loggingMW = require('loggin-js-express');
 ```
 
 
@@ -135,7 +148,7 @@ interface ErrorLoggerOptions = {
 ```
 
 ### Found a bug?
-If you found a **bug** or like to leave a **feature request**, please [leave an issue](https://github.com/nombrekeff/express-loggin-js/issues/new/choose) and we will take care of it.
+If you found a **bug** or like to leave a **feature request**, please [leave an issue](https://github.com/nombrekeff/loggin-js-express/issues/new/choose) and we will take care of it.
 > Just make sure it's not already filed.
 
 

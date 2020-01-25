@@ -1,6 +1,5 @@
 const express = require('express');
 const loginExpress = require('../index.js');
-const loggin = require('loggin-js');
 
 const loggerMw = loginExpress.logger({
   color: true,

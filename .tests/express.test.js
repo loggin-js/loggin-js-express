@@ -1,6 +1,5 @@
 const express = require('express');
 const logginMW = require('../index.js');
-const loggin = require('loggin-js');
 
 const loggerMw = logginMW.logger({
   color: true,
@@ -33,6 +32,6 @@ app.use(function(req, res, next) {
 });
 app.use(loggerErrorMw);
 
-app.listen(4000, () => {
+app.listen(5000, () => {
   console.log("Listening at port: 4000");
 });
